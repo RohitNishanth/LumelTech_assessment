@@ -85,7 +85,7 @@ const BusinessTable = () => {
             
             <th>Input</th>
             <th>Allocation %</th>
-            <th>Set Value</th>
+            <th>Allocation Val</th>
             <th>Variance (%)</th>
           </tr>
         </thead>
