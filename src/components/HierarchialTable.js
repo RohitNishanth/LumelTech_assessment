@@ -82,10 +82,11 @@ const BusinessTable = () => {
           <tr>
             <th>Label</th>
             <th>Value</th>
-            <th>Variance (%)</th>
+            
             <th>Input</th>
             <th>Allocation %</th>
             <th>Set Value</th>
+            <th>Variance (%)</th>
           </tr>
         </thead>
         <tbody>
@@ -94,7 +95,7 @@ const BusinessTable = () => {
               <tr>
                 <td>{item.label}</td>
                 <td>{item.value.toFixed(2)}</td>
-                <td>{item.variance ? item.variance.toFixed(2) + "%" : "-"}</td>
+                
                 <td>
                   <input
                     type="number"
@@ -112,15 +113,14 @@ const BusinessTable = () => {
                     Set
                   </button>
                 </td>
+                <td>{item.variance ? item.variance.toFixed(2) + "%" : "-"}</td> 
               </tr>
               {item.children &&
                 item.children.map((child) => (
                   <tr key={child.id}>
                     <td>-- {child.label}</td>
                     <td>{child.value.toFixed(2)}</td>
-                    <td>
-                      {child.variance ? child.variance.toFixed(2) + "%" : "-"}
-                    </td>
+                    
                     <td>
                       <input
                         type="number"
@@ -139,6 +139,9 @@ const BusinessTable = () => {
                       >
                         Set
                       </button>
+                    </td>
+                    <td>
+                      {child.variance ? child.variance.toFixed(2) + "%" : "-"}
                     </td>
                   </tr>
                 ))}
