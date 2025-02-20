@@ -158,5 +158,4 @@ const BusinessTable = () => {
     </div>
   );
 };
-
 export default BusinessTable;
