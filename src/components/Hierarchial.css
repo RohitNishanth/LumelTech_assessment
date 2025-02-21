@@ -1,15 +1,17 @@
 .container {
-  max-width: 800px;
+  max-width: 90%;
+  width: 800px;
   margin: 50px auto;
-  padding: 1cqw;
+  padding: 2cqw;
   background-color: #f9f9f9;
-
   border-radius: 10px;
   text-align: center;
+  overflow-x: auto;
 }
 
 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 table {
@@ -18,10 +20,14 @@ table {
   background: white;
 }
 
+.table-wrapper {
+  overflow-x: auto;
+}
+
 th,
 td {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 0.8rem;
   text-align: center;
 }
 
@@ -30,32 +36,87 @@ th {
   color: white;
 }
 
-tr:nth-child(1) {
-  background-color: #f2f2f2;
-}
-tr:nth-child(4) {
-  background-color: #f2f2f2;
-}
-tr:nth-child(7) {
+tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
 input {
-  width: 80px;
+  width: 100%;
+  max-width: 80px;
   padding: 5px;
   text-align: center;
 }
 
 button {
-  padding: 5px 10px;
-  margin: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
   border: none;
   background-color: #007bff;
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 3cqw;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+
+  input {
+    max-width: 60px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 4cqw;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 0.4rem;
+  }
+
+  input {
+    max-width: 50px;
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+  }
 }
